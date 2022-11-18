@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int swap(int *a, int *b){
+   int temp = *a;
+   *a = *b;
+   *b = temp;
+}
+
 int pseudo(int list[], int n){
 
    for(int i=0; i<n-1; i++){
@@ -15,12 +21,6 @@ int pseudo(int list[], int n){
 	  swap(&list[min], &list[i]);
        }
    }
-}
-
-int swap(int *a, int *b){
-   int temp = *a;
-   *a = *b;
-   *b = temp;
 }
 
 int main(){
